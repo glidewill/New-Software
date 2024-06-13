@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Software Documentation Form</title>
+</head>
+<body>
+    <form id="documentationForm">
+        <label for="softwareTitle">Software Title:</label>
+        <input type="text" id="softwareTitle" name="softwareTitle"><br><br>
+
+        <label for="versionNumber">Version Number:</label>
+        <input type="text" id="versionNumber" name="versionNumber"><br><br>
+
+        <label for="prePaid">Pre-paid:</label>
+        <select id="prePaid" name="prePaid">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select><br><br>
+
+        <label for="platform">Platform:</label>
+        <select id="platform" name="platform">
+            <option value="Windows">Windows</option>
+            <option value="macOS">macOS</option>
+            <option value="iOS">iOS</option>
+            <option value="Android">Android</option>
+        </select><br><br>
+
+        <!-- Add more fields as needed -->
+
+        <button type="button" onclick="generateDocument()">Generate Documentation</button>
+    </form>
+
+    <script>
+        function generateDocument() {
+            var form = document.getElementById('documentationForm');
+            var data = new FormData(form);
+            var docContent = '';
+
+            data.forEach(function(value, key){
+                docContent += key + ': ' + value + '\n';
+            });
+
+            var blob = new Blob([docContent], { type: 'text/plain' });
+            var link = document.createElement('a');
+            link.href = window.URL.createObjectURL(blob);
+            link.download = 'documentation.txt';
+            link.click();
+        }
+    </script>
+</body>
+</html>
