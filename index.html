@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Title Feature Documentation Questionnaire</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Software Title Feature Documentation Questionnaire</h1>
+    <form id="questionnaireForm">
+        <!-- Section 1: Basic Information -->
+        <h2>Section 1: Basic Information</h2>
+        <label for="softwareTitle">Software Title Name:</label>
+        <input type="text" id="softwareTitle" name="softwareTitle"><br><br>
+        
+        <label for="versionNumber">Version Number:</label>
+        <input type="text" id="versionNumber" name="versionNumber"><br><br>
+        
+        <label for="releaseDate">Release Date:</label>
+        <input type="date" id="releaseDate" name="releaseDate"><br><br>
+        
+        <label for="developerName">Developer Name/Company:</label>
+        <input type="text" id="developerName" name="developerName"><br><br>
+        
+        <!-- Section 2: Availability and Platform -->
+        <h2>Section 2: Availability and Platform</h2>
+        <label>Is the software title pre-paid?</label><br>
+        <input type="radio" id="prePaidYes" name="prePaid" value="Yes">
+        <label for="prePaidYes">Yes</label>
+        <input type="radio" id="prePaidNo" name="prePaid" value="No">
+        <label for="prePaidNo">No</label><br><br>
+        
+        <label>Is the software title available for mobile play?</label><br>
+        <input type="radio" id="mobilePlayYes" name="mobilePlay" value="Yes">
+        <label for="mobilePlayYes">Yes</label>
+        <input type="radio" id="mobilePlayNo" name="mobilePlay" value="No">
+        <label for="mobilePlayNo">No</label><br><br>
+        
+        <label>Supported Platforms:</label><br>
+        <input type="checkbox" id="windows" name="platforms" value="Windows">
+        <label for="windows">Windows</label><br>
+        <input type="checkbox" id="macOS" name="platforms" value="macOS">
+        <label for="macOS">macOS</label><br>
+        <input type="checkbox" id="iOS" name="platforms" value="iOS">
+        <label for="iOS">iOS</label><br>
+        <input type="checkbox" id="android" name="platforms" value="Android">
+        <label for="android">Android</label><br>
+        <input type="checkbox" id="otherPlatform" name="platforms" value="Other">
+        <label for="otherPlatform">Other (Please specify)</label>
+        <input type="text" id="otherPlatformText" name="otherPlatformText" style="display:none;"><br><br>
+        
+        <label>Is there a web-based version available?</label><br>
+        <input type="radio" id="webVersionYes" name="webVersion" value="Yes">
+        <label for="webVersionYes">Yes</label>
+        <input type="radio" id="webVersionNo" name="webVersion" value="No">
+        <label for="webVersionNo">No</label><br><br>
+        
+        <!-- Section 3: Game Features -->
+        <h2>Section 3: Game Features</h2>
+        <label>Game Type:</label><br>
+        <input type="radio" id="gameTypeReels" name="gameType" value="Reels">
+        <label for="gameTypeReels">Reels</label>
+        <input type="radio" id="gameTypeFish" name="gameType" value="Fish Game">
+        <label for="gameTypeFish">Fish Game</label>
+        <input type="radio" id="gameTypeOther" name="gameType" value="Other">
+        <label for="gameTypeOther">Other (Please specify)</label>
+        <input type="text" id="gameTypeOtherText" name="gameTypeOtherText" style="display:none;"><br><br>
+        
+        <label for="levels">Number of Levels/Stages:</label>
+        <input type="number" id="levels" name="levels"><br><br>
+        
+        <label for="playersSupported">Number of Players Supported:</label>
+        <input type="number" id="playersSupported" name="playersSupported"><br><br>
+        
+        <label>Game Modes:</label><br>
+        <input type="checkbox" id="singlePlayer" name="gameModes" value="Single-player">
+        <label for="singlePlayer">Single-player</label><br>
+        <input type="checkbox" id="multiplayer" name="gameModes" value="Multiplayer">
+        <label for="multiplayer">Multiplayer</label><br>
+        <input type="checkbox" id="coOp" name="gameModes" value="Co-op">
+        <label for="coOp">Co-op</label><br>
+        <input type="checkbox" id="competitive" name="gameModes" value="Competitive">
+        <label for="competitive">Competitive</label><br><br>
+        
+        <label>Key Features:</label><br>
+        <input type="checkbox" id="bonusRounds" name="keyFeatures" value="Bonus Rounds">
+        <label for="bonusRounds">Bonus Rounds</label><br>
+        <input type="checkbox" id="progressiveJackpots" name="keyFeatures" value="Progressive Jackpots">
+        <label for="progressiveJackpots">Progressive Jackpots</label><br>
+        <input type="checkbox" id="freeSpins" name="keyFeatures" value="Free Spins">
+        <label for="freeSpins">Free Spins</label><br>
+        <input type="checkbox" id="specialSymbols" name="keyFeatures" value="Special Symbols">
+        <label for="specialSymbols">Special Symbols (Wilds, Scatters, etc.)</label><br>
+        <input type="checkbox" id="inGamePurchases" name="keyFeatures" value="In-Game Purchases">
+        <label for="inGamePurchases">In-Game Purchases</label><br><br>
+        
+        <!-- Continue with other sections similarly -->
+        
+        <!-- Submit button -->
+        <button type="button" onclick="generatePDF()">Generate PDF</button>
+    </form>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
